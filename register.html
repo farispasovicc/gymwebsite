@@ -11,31 +11,35 @@
 </head>
 <body >
 <center>
-<form action="/index.html"> //action_page.php
-    <h1>
-        REGISTRATION
-    </h1> <hr>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname"><br><br>
-
-    <label for="lname">Last name:</label>   
-    <input type="text" id="lname"><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email"><br><br>
-
-    <label for="number">Number:</label>
-    <input type="text" id="age"><br><br>
-
-    <label for="date">Date of birth:</label>
-<input type="date" id="number" name="number"><br><br>
-
-<label for="password">Password:</label>
-<input type="password" id="password"><br><br>
-
-<input type="submit" value="Register now" class="register" href="/index.html">
-<p style="font-size: 13px;">If you have an account <b><a href="/login.html" style="color: red;">click here to login!</a></b></p>
-</form>
+    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
+        <h1>REGISTRATION</h1>
+        <hr>
+        
+        <label for="fname">Ime:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+    
+        <label for="lname">Prezime:</label>   
+        <input type="text" id="lname" name="lname"><br><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+    
+        <label for="number">Broj:</label>
+        <input type="text" id="number" name="number"><br><br>
+    
+        <label for="date">Datum rodjenja:</label>
+        <input type="date" id="date" name="date"><br><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+    
+        <input type="submit" value="Register now" class="register">
+        
+        <p style="font-size: 13px;">
+            Ukoliko imate nalog <b><a href="/login.html" style="color: red;">kliknite ovdje da se prijavite!</a></b>
+        </p>
+    </form>
+    
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 </center>

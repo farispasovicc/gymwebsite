@@ -95,3 +95,128 @@ header p, img{
     margin-left: 1150px;
     
 }
+
+.mjesecmr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    margin-left: 300px;
+    width: 230px;
+    display: flexbox;
+    
+}
+
+.mjesecmr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.mjeseczr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    margin-left: 850px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 700px;
+    
+}
+
+.mjeseczr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+
+.dnevni{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 700px;
+    height:110px;
+}
+
+.dnevni:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.godmr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.godmr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.godzr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 810px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.godzr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.polugod{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    left:300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.polugod:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+
+.iframe{
+    position: absolute;
+    top:1300px;
+}
