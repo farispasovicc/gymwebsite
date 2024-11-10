@@ -40,6 +40,10 @@ h2{
     font-family: Roboto, Arial;    
 }
 
+h3{
+    color: white;
+    font-family: Roboto, Arial;    
+}
 .logo{
     width: 50px;
     
@@ -216,7 +220,33 @@ header p, img{
 }
 
 
+
+
 .iframe{
-    position: absolute;
-    top:1300px;
-}
+    filter:invert(100%);
+    width: 1000px;
+    height: 600px;
+    }
+    
+    
+    body::-webkit-scrollbar {
+      width: 15px;
+      }
+      body::-webkit-scrollbar-track {
+        background: white;
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background: red;
+      }
+    
+      body{
+        overflow-x: hidden;
+      }
+    
+
+      .leftfooter{
+        display: flexbox;
+        position: absolute;
+    right: 0;
+      }
