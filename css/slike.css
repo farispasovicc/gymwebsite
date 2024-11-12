@@ -1,0 +1,34 @@
+.eksterijer img {
+  width: 500px;
+  display: block;
+  margin: auto;
+  border-color: red;
+  border-width: 1px;
+  border-radius: 16px;
+  border-style: solid;
+}
+
+.eksterijer img:hover {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  transition: 0.3s;
+}
+
+.enterijer img {
+  width: 500px;
+  display: block;
+  margin: auto;
+  border-color: red;
+  border-width: 1px;
+  border-radius: 16px;
+  border-style: solid;
+}
+
+.enterijer img:hover {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  transition: 0.3s;
+}/*# sourceMappingURL=slike.css.map */
+

@@ -1,0 +1,252 @@
+h1{
+    color:red;
+    font-family: Roboto, Arial;
+}
+
+body{
+    background-color: black;
+}
+
+label{
+    color:white;
+    color:white;
+    font-family: Roboto, Arial;
+    font-size: 20px;
+}
+
+.register{
+    color:red;
+    font-family: Roboto, Arial;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 8px;
+
+}
+
+.register:hover{
+    color:white;
+    background-color: red;
+    transition: 1s;
+}
+
+p{
+    color: white;
+    font-family: Roboto, Arial;
+}
+
+h2{
+    color: white;
+    font-family: Roboto, Arial;    
+}
+
+h3{
+    color: white;
+    font-family: Roboto, Arial;    
+}
+.logo{
+    width: 50px;
+    
+}
+
+a{
+    font-family: Roboto, Arial;
+    color: white;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+.pocetna{
+    opacity: 70%;
+    width: 300px;
+}
+
+.pocetna:hover{
+    opacity: 100%;
+    transition: 1s;
+ 
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top:0;
+  left:0;
+  background: transparent;
+  backdrop-filter: blur(10px);
+    width: 1918px;
+  height:60px;
+    align-items: center;
+    z-index: 100;
+}
+
+header p, img{
+    margin-left: 260px;
+    font-family: roboto;
+    color: white;
+    font-size: 16px;
+  }
+
+.zastomi{
+    width: 700px;
+    text-align: center;
+}
+
+.sprave{
+    width: 700px;
+    
+    text-align: center;
+    margin-left: 1150px;
+    
+}
+
+.mjesecmr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    margin-left: 300px;
+    width: 230px;
+    display: flexbox;
+    
+}
+
+.mjesecmr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.mjeseczr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    margin-left: 850px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 700px;
+    
+}
+
+.mjeseczr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+
+.dnevni{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 700px;
+    height:110px;
+}
+
+.dnevni:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.godmr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.godmr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.godzr{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    right: 810px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.godzr:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+.polugod{
+    color: white;
+    font-family: Roboto, Arial;
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 8px;
+    left:300px;
+    display: flexbox;
+    width: 230px;
+    position: absolute;
+    top: 900px;
+    height:110px;
+    
+    
+}
+
+.polugod:hover{
+    box-shadow: 1px 1px 10px 1px red;
+    transition: 1s;
+}
+
+
+
+
+.iframe{
+    filter:invert(100%);
+    width: 1000px;
+    height: 600px;
+    }
+    
+    
+    body::-webkit-scrollbar {
+      width: 15px;
+      }
+      body::-webkit-scrollbar-track {
+        background: white;
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background: red;
+      }
+    
+      body{
+        overflow-x: hidden;
+      }
+    
+
+      .leftfooter{
+        display: flexbox;
+        position: absolute;
+    right: 0;
+      }

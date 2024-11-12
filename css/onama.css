@@ -1,0 +1,61 @@
+
+.onamaa{
+   width: 500px;
+   margin: auto;
+   margin-top: 100px;
+}
+
+.video{
+    position: absolute;
+    right: 510px;
+}
+
+.tabelacjen{
+ color:white; 
+font-size: 25px;
+font-family: Roboto, Arial;
+margin: auto    ;
+border-radius: 16px;
+}
+
+.tabelacjen th{
+    color: red;
+    
+}
+
+.tabelacjen td, th {
+    border: 1px solid white;
+    text-align: left;
+    padding: 20px;
+  }
+
+.tabelacjen:hover{
+ box-shadow:  1px 1px 30px red;
+ transition: 0.3s;
+
+}
+
+ul{
+    color: white    ;
+    font-family: Roboto, Arial;
+    display: inline-block;
+}
+
+.mailbtn{
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.mailbtn:hover{
+    padding: 20px;
+    border-radius: 16px;
+    border: none;
+    background-color: black;
+    color: red;
+    box-shadow: 1px 1px 10px red;
+    transition:0.7s;
+}
+
