@@ -250,3 +250,21 @@ header p, img{
         position: absolute;
     right: 0;
       }
+
+      .mailbtn{
+        padding: 20px;
+        border-radius: 8px;
+        border: none;
+        background-color: red;
+        color: white;
+    }
+    
+    .mailbtn:hover{
+        padding: 20px;
+        border-radius: 16px;
+        border: none;
+        background-color: black;
+        color: red;
+        box-shadow: 1px 1px 10px red;
+        transition:0.7s;
+    }
