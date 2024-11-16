@@ -44,14 +44,14 @@ ul {
     padding: 0;
 }
 
-.wrapper {
+.svezj {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px;
 }
 
-.wrapper a {
+.svezj a {
     text-decoration: none;
     background-color: red;
     padding: 10px 20px; 
@@ -60,7 +60,7 @@ ul {
     transition: all 0.3s ease;
 }
 
-.wrapper a:hover {
+.svezj a:hover {
     background-color: black;
     color: white;
     box-shadow: 1px 1px 10px red;
@@ -117,7 +117,7 @@ ul {
         font-size: 16px;
     }
 
-    .wrapper a {
+    .svezj a {
         padding: 8px 16px; 
         font-size: 14px;
     }
@@ -136,7 +136,7 @@ ul {
         padding: 8px;
     }
 
-    .wrapper a {
+    .svezj a {
         padding: 6px 12px; 
         font-size: 12px;
     }
@@ -153,6 +153,7 @@ ul {
     margin: 100px auto 0 auto;
     text-align: center;
     box-sizing: border-box;
+    
 }
 
 @media (max-width: 768px) {
@@ -165,6 +166,9 @@ ul {
         margin-top: 200px;
     }
 
+    .locationtxt{
+        margin-left:50px ;
+    }
 }
 
 @media (max-width: 480px) {
@@ -175,6 +179,17 @@ ul {
 
     .tabelacjen{
         margin-top: 150px;
+        
+    }
+    .video{
+        position: relative;
+        width: 100vw;
+    }
+    .video video{
+        width: 80vw;
+        height: 100vw;
     }
 }
+
+
 
