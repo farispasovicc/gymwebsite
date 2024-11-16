@@ -3,6 +3,8 @@
 <head>
     <title>Register page</title>
     <meta charset="utf=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/onama.css">
     <link rel="stylesheet" href="css/slike.css">
@@ -10,45 +12,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body >
 <center>
-    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
-        <h1>REGISTRATION</h1>
-        <hr>
-        
-        <label for="fname">Ime:</label>
-        <input type="text" id="fname" name="fname"><br><br>
     
-        <label for="lname">Prezime:</label>   
-        <input type="text" id="lname" name="lname"><br><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-    
-        <label for="number">Broj:</label>
-        <input type="text" id="number" name="number"><br><br>
-    
-        <label for="date">Datum rodjenja:</label>
-        <input type="date" id="date" name="date"><br><br>
-    
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
 
+<div style="width: 700px;">
+    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post" style="width: 700px;">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputName4">Name</label>
+                <input type="name" class="form-control" id="inputName4" placeholder="Ime Prezime">
+              </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Sifra">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Ismeta Mujezinovica">
+        </div>
 
-    
-        <input type="submit" value="Register now" class="register">
-        
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+<br>
+        <button type="submit" class="btn btn-primary" href="/index_login.html">Register</button>
         <p style="font-size: 13px;">
-            Ukoliko imate nalog <b><a href="/login.html" style="color: red;">kliknite ovdje da se prijavite!</a></b>
+            If you already have an account <b><a href="/login.html" style="color: red;">click here to sign in!</a></b>
         </p>
-    </form>
+      </form>
+</div>
     
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 </center>
 
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

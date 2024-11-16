@@ -1,71 +1,54 @@
-h1{
-    color:red;
-    font-family: Roboto, Arial;
-}
 
-body{
+body {
+    font-family: Roboto, Arial, sans-serif;
     background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-label{
-    color:white;
-    color:white;
-    font-family: Roboto, Arial;
-    font-size: 20px;
+h1, h2, h3 {
+    font-family: Roboto, Arial, sans-serif;
 }
 
-.register{
-    color:red;
-    font-family: Roboto, Arial;
+h1 {
+    color: red;
+}
+
+h2, h3 {
+    color: white;
+}
+
+label, p, a {
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+
+.register, .mailbtn {
+    color: red;
+    font-family: Roboto, Arial, sans-serif;
     height: 50px;
     width: 100px;
     border: 0;
     border-radius: 8px;
-
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.register:hover{
-    color:white;
+.register:hover, .mailbtn:hover {
+    color: white;
     background-color: red;
-    transition: 1s;
+    box-shadow: 1px 1px 10px red;
+    transition: 0.7s;
 }
 
-p{
-    color: white;
-    font-family: Roboto, Arial;
-}
 
-h2{
-    color: white;
-    font-family: Roboto, Arial;    
-}
-
-h3{
-    color: white;
-    font-family: Roboto, Arial;    
-}
-.logo{
-    width: 50px;
-    
-}
-
-a{
-    font-family: Roboto, Arial;
-    color: white;
-    padding-top: 15px;
-    text-decoration: none;
-}
-
-.pocetna{
-    opacity: 70%;
-    width: 300px;
-}
-
-.pocetna:hover{
-    opacity: 100%;
-    transition: 1s;
- 
-}
 
 header{
     display: flex;
@@ -74,197 +57,273 @@ header{
   left:0;
   background: transparent;
   backdrop-filter: blur(10px);
-    width: 1918px;
-  height:60px;
+    width: 100%;
+
     align-items: center;
     z-index: 100;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-height: 10%;
 }
 
-header p, img{
-    margin-left: 260px;
-    font-family: roboto;
+header p, header img {
+    margin-left: 20px;
     color: white;
     font-size: 16px;
-  }
+}
 
-.zastomi{
-    width: 700px;
+
+.card {
+    box-shadow: 1px 1px 10px white;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 10px red;
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(1px, -2px) rotate(-1deg); }
+    10% { transform: translate(-1px, 1px) rotate(1deg); }
+    20% { transform: translate(3px, 0px) rotate(-1deg); }
+    30% { transform: translate(-3px, -2px) rotate(1deg); }
+    50% { transform: translate(1px, 2px) rotate(-1deg); }
+}
+
+
+.logo {
+    width: 50px;
+}
+
+.pocetna {
+    opacity: 0.7;
+    width: 300px;
+    transition: 1s;
+}
+
+.pocetna:hover {
+    opacity: 1;
+}
+
+
+.zastomi, .sprave {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px ;
     text-align: center;
 }
 
 .sprave{
-    width: 700px;
-    
-    text-align: center;
-    margin-left: 1150px;
-    
-}
-
-.mjesecmr{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    margin-left: 300px;
-    width: 230px;
-    display: flexbox;
-    
-}
-
-.mjesecmr:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-.mjeseczr{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    margin-left: 850px;
-    display: flexbox;
-    width: 230px;
     position: absolute;
-    top: 700px;
-    
-}
-
-.mjeseczr:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-
-.dnevni{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    right: 300px;
-    display: flexbox;
-    width: 230px;
-    position: absolute;
-    top: 700px;
-    height:110px;
-}
-
-.dnevni:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-.godmr{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    right: 300px;
-    display: flexbox;
-    width: 230px;
-    position: absolute;
-    top: 900px;
-    height:110px;
-    
-    
-}
-
-.godmr:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-.godzr{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    right: 810px;
-    display: flexbox;
-    width: 230px;
-    position: absolute;
-    top: 900px;
-    height:110px;
-    
-    
-}
-
-.godzr:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-.polugod{
-    color: white;
-    font-family: Roboto, Arial;
-    background-color: black;
-    box-shadow: 1px 1px 10px 1px white;
-    border-radius: 8px;
-    left:300px;
-    display: flexbox;
-    width: 230px;
-    position: absolute;
-    top: 900px;
-    height:110px;
-    
-    
-}
-
-.polugod:hover{
-    box-shadow: 1px 1px 10px 1px red;
-    transition: 1s;
-}
-
-
-
-
-.iframe{
-    filter:invert(100%);
-    width: 1000px;
-    height: 600px;
-    }
-    
-    
-    body::-webkit-scrollbar {
-      width: 15px;
-      }
-      body::-webkit-scrollbar-track {
-        background: white;
-      }
-      
-      body::-webkit-scrollbar-thumb {
-        background: red;
-      }
-    
-      body{
-        overflow-x: hidden;
-      }
-    
-
-      .leftfooter{
-        display: flexbox;
-        position: absolute;
     right: 0;
-      }
+}
 
-      .mailbtn{
-        padding: 20px;
-        border-radius: 8px;
-        border: none;
-        background-color: red;
-        color: white;
+.iframe {
+    filter: invert(100%);
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    color: white;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+margin-top: 12px;
+  width: 100%;
+}
+
+
+    .logo {
+        width: 40px;
+        height: auto;
+        margin-right: 10px;
     }
+
+
+footer p, footer a {
+    font-size: 20px;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: red;
+}
+
+
+.leftfooter {
+    width: 100%;
+    text-align: right;
+    margin-top: -100px;
+
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+
+    .footer-item {
+        width: 48%; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-item {
+        width: 100%; 
+        margin: 10px 0;
+    }
+
+    .leftfooter {
+        width: 100%;
+        text-align: center;
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-item {
+        width: 100%; 
+        margin: 10px 0;
+    }
+
+    .leftfooter {
+        font-size: 12px; 
+        margin-top: 20px;
+    }
+
+    footer p, footer a {
+        font-size: 12px; 
+    }
+}
+
+
+/* Pricing */
+.mjesecna {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+
+         
+.godpol{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px; 
     
-    .mailbtn:hover{
-        padding: 20px;
-        border-radius: 16px;
-        border: none;
-        background-color: black;
-        color: red;
-        box-shadow: 1px 1px 10px red;
-        transition:0.7s;
+}
+
+.dnevnigod{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+@media (max-width: 768px) {
+    .godpol, .dnevnigod {
+        width: 45%; 
     }
+}
+
+@media (max-width: 480px) {
+    .godpol, .dnevnigod {
+        width: 100%; 
+    }
+}
+
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: red;
+}
+
+
+@media (max-width: 768px) {
+    header p, header img {
+        margin-left: 10px;
+    }
+
+    .register, .mailbtn {
+        height: 40px;
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .zastomi, .sprave {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .iframe {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .register, .mailbtn {
+        height: 30px;
+        width: 60px;
+        font-size: 12px;
+    }
+
+
+    .pocetna {
+        width: 200px;
+    }
+
+    .zastomi, .sprave {
+        width: 100%;
+    }
+
+    .mjesecna, .dnevnigod, .godpol {
+        flex-direction: column;
+    }
+}
