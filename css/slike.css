@@ -1,34 +1,36 @@
-.eksterijer img {
-  width: 500px;
-  display: block;
-  margin: auto;
-  border-color: red;
-  border-width: 1px;
-  border-radius: 16px;
-  border-style: solid;
-}
-
-.eksterijer img:hover {
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
-  transition: 0.3s;
-}
-
+.eksterijer img,
 .enterijer img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   display: block;
   margin: auto;
   border-color: red;
   border-width: 1px;
   border-radius: 16px;
   border-style: solid;
+  box-sizing: border-box;
 }
 
+.eksterijer img:hover,
 .enterijer img:hover {
   border-color: white;
   border-width: 1px;
   border-style: solid;
   transition: 0.3s;
-}/*# sourceMappingURL=slike.css.map */
+}
 
+@media (max-width: 768px) {
+  .eksterijer img,
+  .enterijer img {
+    width: 90%;
+  }
+  .h1ext {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .eksterijer img,
+  .enterijer img {
+    width: 80%;
+  }
+}/*# sourceMappingURL=slike.css.map */
