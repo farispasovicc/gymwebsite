@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
 }
 
 h1, h2, h3 {
@@ -333,4 +334,57 @@ body::-webkit-scrollbar-thumb {
     .mjesecna, .dnevnigod, .godpol {
         flex-direction: column;
     }
+}
+
+.zastomi {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+
+  
+  .toggle-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color:red;
+  }
+  
+
+  
+  .content {
+    display: none;
+    padding: 10px;
+    border: 1px solid red;
+    border-top: none;
+    background-color: black;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .content.visible {
+    display: block;
+  }
+  .themeSwitcher{
+    display:flex;
+    gap:10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+body.light{
+    background-color: white;
+    color:black;
+}
+body.small{
+    font-size: 12px;
+}
+
+body.large{
+    font-size: 20px;
 }

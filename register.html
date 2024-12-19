@@ -18,42 +18,90 @@
 <center>
     
 
-  <div class="container my-4">
-    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="inputName4">Name</label>
-                <input type="text" class="form-control" id="inputName4" placeholder="Name">
+    <div class="container my-4">
+        <form id="contactForm" action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="inputName4">Name</label>
+                    <input type="text" class="form-control" id="inputName4" placeholder="Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required minlength="8">
+                    <div id="passwordStrength" class="mt-2"></div>
+                </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    
+            <div class="mb-3">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Address" required>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" required pattern="^\d{5}$">
+                </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Address">
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+    
+            <div class="mb-3">
+                <label for="inputDate">Birthdate</label>
+                <input type="date" class="form-control" id="inputDate" required>
             </div>
-            <div class="col-md-2 mb-3">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Register</button>
-        <p class="mt-2" style="font-size: 13px;">
-            If you already have an account <b><a href="/login.html" style="color: red;">click here to sign in!</a></b>
-        </p>
-    </form>
-</div>
+    
+            <button type="submit" class="btn btn-primary">Register</button>
+            <p class="mt-2" style="font-size: 13px;">
+                If you already have an account <b><a href="/login.html" style="color: red;">click here to sign in!</a></b>
+            </p>
+        </form>
+    </div>
+    
+    <script>//task 5 javascript
+        const passwordInput = document.getElementById('inputPassword4');
+        const passwordStrength = document.getElementById('passwordStrength');
+    
+        passwordInput.addEventListener('input', function () {
+            const password = passwordInput.value;
+            const result = zxcvbn(password);
+            const score = result.score;
+            const feedback = result.feedback.suggestions;
+    
+            let strength = '';
+            if (score === 0) {
+                strength = 'Very Weak';
+            } else if (score === 1) {
+                strength = 'Weak';
+            } else if (score === 2) {
+                strength = 'Fair';
+            } else if (score === 3) {
+                strength = 'Good';
+            } else if (score === 4) {
+                strength = 'Strong';
+            }
+    
+            passwordStrength.innerHTML = `<div class="alert alert-info">Password Strength: ${strength}</div>`;
+    
+            if (feedback.length > 0) {
+                passwordStrength.innerHTML += `<div class="alert alert-warning">Suggestions: ${feedback.join(', ')}</div>`;
+            }
+        });
+    
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Please fill out all required fields correctly.');
+            }
+        });
+    </script>
 
     
 <br><br><br><br><br><br><br><br><br><br><br><br>

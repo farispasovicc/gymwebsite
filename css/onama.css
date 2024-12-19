@@ -191,5 +191,41 @@ ul {
     }
 }
 
+.accordioncontainer {
+    width: 70%;
+    margin: 20px auto;
 
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px red;
+
+  }
+  
+  .accordion {
+    background-color:  white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+
+  }
+  
+  .accordion:hover {
+    background-color: black;
+    color:red;    
+
+  }
+  
+  .odgovor {
+    padding: 0 18px;
+    display: none;
+    background-color: black;
+    overflow: hidden;
+    font-size: 16px;
+
+  }
 
