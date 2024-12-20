@@ -18,28 +18,46 @@
 
 <!--BOOTSTRAP-->
 <div class="container my-4">
-  <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-4">
-          <form action="/index_login.html">
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-              <p class="mt-3 text-center" style="font-size: 13px;">
-                  If you don't have an account <b><a href="/register.html" style="color: red;">click here to register!</a></b>
-              </p>
-          </form>
-      </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <form id="loginForm" action="/index_login.html">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <p class="mt-3 text-center" style="font-size: 13px;">
+                    If you don't have an account <b><a href="/register.html" style="color: red;">click here to register!</a></b>
+                </p>
+            </form>
+            <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                Form saved successfully!
+            </div>
+        </div>
+    </div>
   </div>
-</div>
+  
+  <script>
+      const form = document.getElementById('loginForm');
+      const successMessage = document.getElementById('successMessage');
+  
+      form.addEventListener('submit', function(event) {
+          event.preventDefault();
+  
+          successMessage.style.display = 'block';
+          form.reset();
+      });
+  </script>
+  
+    
+  
 
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
