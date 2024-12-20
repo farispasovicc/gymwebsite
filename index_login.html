@@ -16,10 +16,10 @@
 
 
     </head>
-    <body>
-      <header >
+    <body class="dark-theme">
+      <header>
         
-        <a href="onama.html" style="text-decoration: none;">
+        <a href="onama.html" style="text-decoration: none; ">
           <p >
             ABOUT US
               </p>
@@ -47,43 +47,36 @@
 
 
     </header>
+
+
     <nav style="text-align: right; margin-top: 100px;">
       <p>Don`t have an account??</p>
       <a style="color: red;" href="/login.html">Login / </a>
       <a style="color: red;" href="/register.html">Register</a>
   </nav>
+  <div class="controls">
+    <button class="switchbutton" id="themeSwitcher">Dark/Light Theme</button>
 
-  <div class="themeSwitcher">
-    <button id="light" style="background-color: lightcyan;">Light Theme</button>
-    <button id="dark" style="background-color: lightcyan;">Dark Theme</button>
-    <button id="small" style="background-color: lightcyan;">Small Font</button>
-    <button id="large" style="background-color: lightcyan;">Large Font</button>
 </div>
 <script>
-   document.getElementById("light").addEventListener("click",()=>{
-    document.body.classList.remove("dark");
-   });
-   document.getElementById("dark").addEventListener("click",()=>{
-    document.body.classList.add("dark");
-   });
+  // task switch theme
+const themeSwitcher = document.getElementById('themeSwitcher');
+const body = document.body;
 
-   document.getElementById("small").addEventListener("click",()=>{
-    document.body.classList.remove("large");
-    document.body.classList.add("small");
-   });
-   document.getElementById("large").addEventListener("click", ()=>{
-  document.body.classList.remove("small");
-  document.body.classList.add("large");
+themeSwitcher.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
 });
 </script>
 
-    <br><br>
+
+
     <video loop autoplay muted class="video1">
       <source src="photos/homevideo.mp4" type="video/mp4">
       <source src="photos/homevideo.WebM" type="video/WebM">
       Your browser does not support the video tag.
     </video>
-  <br><br><br>
+
 
 
 
@@ -128,7 +121,7 @@
 <br><br><br><br>
 <section class="cijenovnik">
     <center>
-        <h1>PRICE LIST</h1><hr style="background-color: white;">        
+        <h1>PRICE LIST</h1><hr>        
     </center>
 
   <div class="mjesecna">
@@ -224,7 +217,7 @@
 
 
 <CENTER>
-    <h1>PHOTOS:</h1><hr style="background-color: white;">  
+    <h1>PHOTOS:</h1><hr>  
 </CENTER>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> <!--BOOTSTRAP-->
     <div class="carousel-inner">
@@ -270,7 +263,7 @@
 
 
    <footer>
-    <hr style="background-color: white;">
+    <hr>
     <div class="footer-content">
         <div class="footer-item">
             <img src="photos/lokacija.png" class="logo">

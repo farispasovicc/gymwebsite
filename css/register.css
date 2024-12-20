@@ -15,20 +15,25 @@ h1 {
     color: red;
 }
 
-h2, h3 {
-    color: white;
-}
 
 label, p, a {
-    color: white;
+
     font-family: Roboto, Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
     padding-top: 15px;
+
 }
 
+header a{
+    color: white;
+}
+
+footer a, p{
+    color:white;
+}
 .register, .mailbtn {
     color: red;
     font-family: Roboto, Arial, sans-serif;
@@ -64,7 +69,7 @@ header {
 
 header p, header img {
     margin-left: 40px;
-    color: white;
+
     font-size: 16px;
 }
 
@@ -161,7 +166,7 @@ header p, header img {
 }
 
 footer {
-    color: white;
+
     box-sizing: border-box;
     width: 100%;
 }
@@ -188,7 +193,7 @@ footer {
 footer p, footer a {
     font-size: 20px;
     justify-content: center;
-    color: white;
+
     text-decoration: none;
 }
 
@@ -371,20 +376,55 @@ body::-webkit-scrollbar-thumb {
   .content.visible {
     display: block;
   }
-  .themeSwitcher{
-    display:flex;
-    gap:10px;
-    margin-top: 15px;
-    justify-content: center;
-}
-body.light{
-    background-color: white;
-    color:black;
-}
-body.small{
-    font-size: 12px;
+
+  .light-theme {
+    background-color: rgb(245, 237, 237);
+    color: black;
 }
 
-body.large{
-    font-size: 20px;
+.light-theme a {
+
+    color: black;
+}
+
+.light-theme p {
+
+    color: black;
+}
+
+.dark-theme a, p {
+
+    color: white;
+}
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+.dark-theme hr {
+    background-color: white;
+
+}
+
+.light-theme hr {
+    background-color: black;
+
+}
+
+
+.controls {
+    padding: 20px;
+    text-align: center;
+}
+.switchbutton {
+    padding: 10px 20px;
+    margin: 5px;
+    box-shadow: 1px 1px 10px red;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: black;
+    color: white    ;
+}
+.switchbutton:hover {
+    opacity: 0.9;
 }
