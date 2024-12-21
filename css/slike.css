@@ -1,16 +1,11 @@
-
-
 .thumbnail {
     width: 100%;
     max-width: 500px;
-
     cursor: pointer;
     border: 1px solid white;
     border-radius: 5px;
     transition: all 0.3s;
 }
-
-
 
 .modal {
     display: none;
@@ -49,7 +44,6 @@
         width: 100%;
         max-width: 300px;
     }
-    
     .modal img {
         width: 60%;
     }
@@ -60,7 +54,6 @@
         width: 100%;
         max-width: 200px;
     }
-    
     .modal img {
         width: 80%;
     }

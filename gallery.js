@@ -77,4 +77,40 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
+//weather api
+
+document.getElementById("weatherForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const city = document.getElementById("city").value;
+  const output = document.getElementById("output");
+  const apiKey = "your_api_key_here"; // Replace with your OpenWeatherMap API key
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  output.innerHTML = "Loading...";
+
+  try {
+      const response = await fetch(url);
+
+      if (!response.ok) {
+          throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      const { name, main, weather } = data;
+
+      output.innerHTML = `
+          <div class="weather">
+              <h2>Weather in ${name}</h2>
+              <p>Temperature: ${main.temp}°C</p>
+              <p>Humidity: ${main.humidity}%</p>
+              <p>Condition: ${weather[0].description}</p>
+          </div>
+      `;
+  } catch (error) {
+      output.innerHTML = `<p class="error">${error.message}</p>`;
+  }
+});
+
+
 

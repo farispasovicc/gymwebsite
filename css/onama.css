@@ -5,18 +5,14 @@ body {
     background-color: black; 
 }
 
-
-
-
-
 .tabelacjen {
     color: white;
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 18px;
     font-family: Roboto, Arial, sans-serif;
     margin: 20px auto;
     border-radius: 16px;
     border-collapse: collapse;
-    width: 90%; /* Make table responsive */
+    width: 90%;
     max-width: 600px;
 }
 
@@ -109,10 +105,7 @@ ul {
     font-size: 36px;
 }
 
-
 @media (max-width: 768px) {
-
-
     .tabelacjen {
         font-size: 16px;
     }
@@ -125,12 +118,9 @@ ul {
     .modalcontent {
         padding: 1em;
     }
-
 }
 
 @media (max-width: 480px) {
-
-
     .tabelacjen td,
     th {
         padding: 8px;
@@ -146,14 +136,12 @@ ul {
     }
 }
 
-
 .onamaa {
     width: 100%;
     max-width: 500px;
     margin: 100px auto 0 auto;
     text-align: center;
     box-sizing: border-box;
-    
 }
 
 @media (max-width: 768px) {
@@ -162,12 +150,12 @@ ul {
         margin: 50px auto 0 auto;
     }
 
-    .h1loc{
+    .h1loc {
         margin-top: 200px;
     }
 
-    .locationtxt{
-        margin-left:50px ;
+    .locationtxt {
+        margin-left: 50px;
     }
 }
 
@@ -177,15 +165,16 @@ ul {
         margin: 300px auto 0 auto;
     }
 
-    .tabelacjen{
+    .tabelacjen {
         margin-top: 150px;
-        
     }
-    .video{
+
+    .video {
         position: relative;
         width: 100vw;
     }
-    .video video{
+
+    .video video {
         width: 80vw;
         height: 100vw;
     }
@@ -194,14 +183,12 @@ ul {
 .accordioncontainer {
     width: 70%;
     margin: 20px auto;
-
     border-radius: 8px;
     box-shadow: 1px 1px 15px red;
+}
 
-  }
-  
-  .accordion {
-    background-color:  white;
+.accordion {
+    background-color: white;
     color: black;
     cursor: pointer;
     padding: 18px;
@@ -211,21 +198,25 @@ ul {
     outline: none;
     font-size: 18px;
     transition: background-color 0.3s;
+}
 
-  }
-  
-  .accordion:hover {
+.accordion:hover {
     background-color: black;
-    color:red;    
+    color: red;
+}
 
-  }
-  
-  .odgovor {
+.odgovor {
     padding: 0 18px;
     display: none;
     background-color: black;
     overflow: hidden;
     font-size: 16px;
+}
 
-  }
+.error {
+    color: red;
+}
 
+.weather {
+    margin-top: 20px;
+}
