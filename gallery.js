@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <button onclick="editPost(${i})">Edit</button>
         <button onclick="deletePost(${i})">Delete</button>
       </div>`).join("");
-      //EDITUJEŠ OVDJE!!
+      //EDITUJEŠ OVDJE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     window.posts = posts;
   };
 
@@ -76,41 +76,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+// news api, last task
 
-//weather api
+const apiKey = "a17730141887429e9a7efd24572e2e97";
+const fetchNewsButton = document.getElementById("fetchNews");
+const newsResult = document.getElementById("newsResult");
+const errorMessage = document.getElementById("error");
 
-document.getElementById("weatherForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
+if (!fetchNewsButton || !newsResult || !errorMessage) {
+  console.error("One or more required elements are missing from the DOM.");
+} else {
+  fetchNewsButton.addEventListener("click", async () => {
+    newsResult.innerHTML = "";
+    errorMessage.textContent = "";
 
-  const city = document.getElementById("city").value;
-  const output = document.getElementById("output");
-  const apiKey = "your_api_key_here"; // Replace with your OpenWeatherMap API key
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-  output.innerHTML = "Loading...";
-
-  try {
-      const response = await fetch(url);
+    try {
+      const response = await fetch(
+        `https://newsapi.org/v2/everything?q=gaming&language=en&sortBy=publishedAt&apiKey=${apiKey}`
+      );
 
       if (!response.ok) {
-          throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        throw new Error("Failed to fetch news. Try again later.");
       }
 
       const data = await response.json();
-      const { name, main, weather } = data;
+      if (data.articles.length === 0) {
+        throw new Error("No articles found for gaming news.");
+      }
 
-      output.innerHTML = `
-          <div class="weather">
-              <h2>Weather in ${name}</h2>
-              <p>Temperature: ${main.temp}°C</p>
-              <p>Humidity: ${main.humidity}%</p>
-              <p>Condition: ${weather[0].description}</p>
-          </div>
-      `;
-  } catch (error) {
-      output.innerHTML = `<p class="error">${error.message}</p>`;
-  }
-});
+      displayNews(data.articles);
+    } catch (error) {
+      errorMessage.textContent = error.message;
+    }
+  });
+}
+
+function displayNews(articles) {
+  const maxArticles = 5;
+  const limitedArticles = articles.slice(0, maxArticles);
+
+  limitedArticles.forEach((article) => {
+    const newsDiv = document.createElement("div");
+    newsDiv.classList.add("news-article");
+
+    newsDiv.innerHTML = `
+      <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
+      <p>${article.description || "No description available."}</p>
+      <p><small>Published on: ${new Date(article.publishedAt).toLocaleDateString()}</small></p>
+    `;
+
+    newsResult.appendChild(newsDiv);    
+  });
+}
 
 
 

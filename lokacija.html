@@ -45,29 +45,26 @@
 
         </header>
 <br><br><br><br>
-<nav style="text-align: right; margin-top: 100px;">
-    <p>Don`t have an account??</p>
-    <a style="color: red;" href="/login.html">Login / </a>
-    <a style="color: red;" href="/register.html">Register</a>
-</nav>
-
+<div class="topofpage">
+    <nav style="text-align: right; margin-top: 100px;">
+      <p>Don`t have an account??</p>
+      <a style="color: red;" href="/login.html">Login / </a>
+      <a style="color: red;" href="/register.html">Register</a>
+  </nav>
+  
+  </div>
 
     <center>
         <h1 class="h1loc">LOCATION OF GYM:</h1><hr style="background-color: white;">  
         <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.131825192455!2d18.407310876539817!3d43.873820238133305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758ced521e01323%3A0xad2e1ebe1ee60ff5!2sProgym!5e0!3m2!1sen!2sba!4v1730885996728!5m2!1sen!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </center>
 
-<center>
-    <h1>Current weather</h1>
-    <p style="font-size: 15px;">Check if you can go to our gym,<br> <i>
-        if weather conditions are bad you should train at home
-    </i></p>
-    <form id="weatherForm">
-        <input type="text" id="city" placeholder="Enter city name" required />
-        <button type="submit">Get Weather</button>
-    </form>
-    <div id="output"></div>
-</center>
+    <div class="news-container">
+        <center><button id="fetchNews" >Show News</button></center>
+        <div id="newsResult"></div>
+        <p id="error"></p>
+    </div>
+
 
 
         <br><br>

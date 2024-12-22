@@ -213,10 +213,45 @@ ul {
     font-size: 16px;
 }
 
-.error {
-    color: red;
-}
+.news-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 
-.weather {
-    margin-top: 20px;
+
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 10px red;
+  }
+
+#fetchNews{
+    border-radius: 16px; 
+    border: none; 
+ width: 150px; 
+ background-color: red;
+  color: white;
+   font-weight: bold;
 }
+  .news-article {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid red }
+
+  .news-article h2 {
+    font-size: 18px;
+    color: red;
+  }
+
+  .news-article p {
+    font-size: 14px;
+    color: black;
+  }
+
+  .news-article a{
+    color: red;
+  }
+
+  #error {
+    color: red;
+  }
+

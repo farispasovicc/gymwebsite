@@ -240,6 +240,10 @@ footer a:hover {
     .godpol, .dnevnigod {
         width: 100%;
     }
+
+    .topofpage{
+        margin-top: 300px;
+    }
 }
 
 body::-webkit-scrollbar {
