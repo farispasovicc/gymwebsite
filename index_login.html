@@ -6,18 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/register.css">
+        
     <link rel="stylesheet" href="register.html">
     <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="gallery.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
     </head>
-    <body>
-      <header >
+    <body class="dark-theme">
+      <header>
         
-        <a href="onama.html" style="text-decoration: none;">
+        <a href="onama.html" style="text-decoration: none; ">
           <p >
             ABOUT US
               </p>
@@ -45,50 +47,83 @@
 
 
     </header>
+
+
+<div class="topofpage">
+  <nav style="text-align: right; margin-top: 100px;">
+    <p>Don`t have an account??</p>
+    <a style="color: red;" href="/login.html">Login / </a>
+    <a style="color: red;" href="/register.html">Register</a>
+</nav>
+<div class="controls">
+  <button class="switchbutton" id="themeSwitcher">Dark/Light Theme</button>
+
+</div>
+</div>
+<script>
+  // task switch theme
+const themeSwitcher = document.getElementById('themeSwitcher');
+const body = document.body;
+
+themeSwitcher.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
+});
+</script>
+
+
+
     <video loop autoplay muted class="video1">
       <source src="photos/homevideo.mp4" type="video/mp4">
       <source src="photos/homevideo.WebM" type="video/WebM">
       Your browser does not support the video tag.
     </video>
-  <br><br><br>
 
-<section class="zastomi" >
-    <h2 style="color: red;">WHY US?</h2><hr style="background-color: white;">
 
-<div style="display: flexbox; left: 0;">
-    <p >
-      The fitness center "PROGYM" is a top-equipped, modernly designed fitness center.
 
-      "PROGYM" offers <mark style="background-color:rgb(201, 45, 45);">the highest quality and most complete services</mark> in the field of fitness for both recreational and professional engagement in this type of sport.  
-      <br>
-      You have access to <mark style="background-color:rgb(201, 45, 45);">friendly and professional staff</mark> who will help you exercise and give you advice during your training.  
-      <br>
-      You also have the option to <mark style="background-color:rgb(201, 45, 45);">book private training sessions</mark> with one of the "PROGYM" instructors.  
-      <br>
-      The spaces are <mark style="background-color:rgb(201, 45, 45);">well-ventilated with natural light</mark>, and additionally equipped with ventilation systems, air conditioning, and video surveillance. The fitness center also includes men's and women's locker rooms with showers and toilets.  
-      <br>
-      
 
-    </p>
+  <section class="zastomi">
 
-</section><br><br><br>
+  <div class="leftcon">
+    <button class="toggle-btn"><center>WHY US?</center></button>
+    <div class="content">
+      <p>
+        The fitness center "PROGYM" is a top-equipped, modernly designed fitness center.  
+        "PROGYM" offers <mark style="background-color:rgb(201, 45, 45);">the highest quality and most complete services</mark> in the field of fitness for both recreational and professional engagement in this type of sport.  
+        <br>
+        You have access to <mark style="background-color:rgb(201, 45, 45);">friendly and professional staff</mark> who will help you exercise and give you advice during your training.  
+        <br>
+        You also have the option to <mark style="background-color:rgb(201, 45, 45);">book private training sessions</mark> with one of the "PROGYM" instructors.  
+        <br>
+        The spaces are <mark style="background-color:rgb(201, 45, 45);">well-ventilated with natural light</mark>, and additionally equipped with ventilation systems, air conditioning, and video surveillance. The fitness center also includes men's and women's locker rooms with showers and toilets.  
+        <br>
+      </p>
 
-<section class="sprave" style="display: flexbox;">
+  </div><br><br>
+  <div class="rightcon">
+    <button class="toggle-btn"><center>EQUIPMENT</center></button>
+    <div class="content">
+      <p>
+        The "PROGYM" fitness center is equipped with a line of machines <mark>“PRECOR”</mark>, which are among the best in the global fitness industry.  
+        <br>
+        A high-quality cardio line, machines for all muscle groups, a large number of <mark>free weights</mark>, and other equipment allow you to achieve your desired results in the shortest possible time.  
+        <br>
+        To see the quality of our gym and equipment, you can view pictures under <mark>"Photos"</mark>.  
+      </p>
+    </div>
+  </div>
 
-    <h2 style="color: red;">EQUIPMENT</h2><hr style="background-color: white;">
-    <p>
-      The "PROGYM" fitness center is equipped with a line of machines <mark>“PRECOR”</mark>, which are among the best in the global fitness industry.  
-      <br>
-      A high-quality cardio line, machines for all muscle groups, a large number of <mark>free weights</mark>, and other equipment allow you to achieve your desired results in the shortest possible time.  
-      <br>
-      To see the quality of our gym and equipment, you can view pictures under <mark>"Photos"</mark>.  
-      
-    </p>
-</section>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+  </section>
+
+
+
+
+
+
+<br><br><br><br>
 <section class="cijenovnik">
     <center>
-        <h1>PRICE LIST</h1><hr style="background-color: white;">        
+        <h1>PRICE LIST</h1><hr>        
     </center>
 
   <div class="mjesecna">
@@ -169,10 +204,14 @@
     </p>
     
     </center>
+    
         </div>
       </div>
+      
  </div>
-
+<center>
+  <a href="cijene.html">VIEW MORE<mark>(prices)</mark></a>
+</center>
 
 </section>
 <br><br><br><br>
@@ -180,7 +219,7 @@
 
 
 <CENTER>
-    <h1>PHOTOS:</h1><hr style="background-color: white;">  
+    <h1>PHOTOS:</h1><hr>  
 </CENTER>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> <!--BOOTSTRAP-->
     <div class="carousel-inner">
@@ -214,6 +253,10 @@
       <span class="sr-only">Next</span>
     </a>
   </div><br><br><br><br><br><br>
+
+<center>  <h1>Reviews:</h1></center><hr><br>  
+  <div id="blog-container"></div>
+  
 <center>
     <p style="color:red;">If you have any questions,
       <br> contact us via Facebook, Instagram or E-Mail.</p>
@@ -226,7 +269,7 @@
 
 
    <footer>
-    <hr style="background-color: white;">
+    <hr>
     <div class="footer-content">
         <div class="footer-item">
             <img src="photos/lokacija.png" class="logo">
@@ -255,7 +298,7 @@
     </div>
 </footer>
  
-
+  <script src="gallery.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

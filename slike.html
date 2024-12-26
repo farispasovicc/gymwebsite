@@ -3,10 +3,11 @@
 <head>
     <title>Photos</title>
     <meta charset="utf=8">
-    <link rel="stylesheet" href="css/register.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/onama.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/slike.css">
+    <link rel="stylesheet" href="gallery.js">
 <link rel="stylesheet" href="register.html">
 <link rel="stylesheet" href="login.html">
 <link rel="stylesheet" href="index.html">
@@ -45,35 +46,74 @@
 
 
     </header><br><br><br>
+    <div class="topofpage">
+        <nav style="text-align: right; margin-top: 100px;">
+          <p>Don`t have an account??</p>
+          <a style="color: red;" href="/login.html">Login / </a>
+          <a style="color: red;" href="/register.html">Register</a>
+      </nav>
+      
+      </div>
+
+
 <CENTER>
-    <h1 class="h1ext">PHOTOS:</h1>
-</CENTER>
-
-<div class="eksterijer" >
+    <h1>EXTERIOR:</h1>
+</CENTER><HR>
+<div class="gallery">
 <center>
-    <h2 >EXTERIOR:</h2><hr>
+    <img src="photos/eksterijer/eks1.jpg" alt="Image 1" class="thumbnail">
+    <img src="photos/eksterijer/eks2.jpg"  alt="Image 2" class="thumbnail"> 
 </center>
-
-    <img src="photos/eksterijer/eks1.jpg" alt="There is no internet connection to load this image, try again later."><br><br><br>
-<img src="photos/eksterijer/eks2.jpg" alt="There is no internet connection to load this image, try again later.">
-
-    
 </div>
 
-<div class="enterijer">
-    <center>
-        <h2>INTERIOR:</h3><hr>
-    </center>
-    
-        <img src="photos/enterijer/ent1.jpg" alt="There is no internet connection to load this image, try again later."><br><br><br>
-        <img src="photos/enterijer/ent2.jpg"alt="There is no internet connection to load this image, try again later."><br><br><br>
-        <img src="photos/enterijer/ent3.jpg" alt="There is no internet connection to load this image, try again later."><br><br><br>
-        <img src="photos/enterijer/ent4.jpg" alt="There is no internet connection to load this image, try again later."><br><br><br>
-        <img src="photos/enterijer/ent5.jpg"alt="There is no internet connection to load this image, try again later."><br><br><br>
-        <img src="photos/enterijer/ent6.jpg" alt="There is no internet connection to load this image, try again later."><br><br><br>
-    
-        
-    </div>
+
+<CENTER>
+    <h1>INTERIOR:</h1>
+</CENTER><HR>
+    <div class="gallery">
+        <center>
+            <img src="photos/enterijer/ent1.jpg" alt="Image 1" class="thumbnail">
+            <img src="photos/enterijer/ent2.jpg" alt="Image 2" class="thumbnail">
+            <img src="photos/enterijer/ent3.jpg" alt="Image 3" class="thumbnail">
+            <img src="photos/enterijer/ent4.jpg" alt="Image 4" class="thumbnail">
+            <img src="photos/enterijer/ent5.jpg" alt="Image 5" class="thumbnail">
+            <img src="photos/enterijer/ent6.jpg" alt="Image 6" class="thumbnail">
+
+        </center>
+        </div>
+
+
+<div class="modal" id="modal">
+    <button class="close" id="close">&times;</button>
+    <img id="modal-img" src="" alt="">
+</div>
+
+
+<script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = thumbnail.src;
+            modalImg.alt = thumbnail.alt;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
 
     <br><br>
     <footer>
