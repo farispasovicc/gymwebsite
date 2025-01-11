@@ -1,41 +1,46 @@
-
-
 const routes = {
-    "/": "/views/home.html",
-    "/about": "/views/about.html",
-    "/services": "/views/services.html",
-    "/contact": "/views/contact.html",
+    "/": "/index_login.html", 
+    "/onama": "/onama.html", 
+    "/cijene": "/cijene.html", 
+    "/lokacija": "/lokacija.html",
+    "/slike": "/slike.html",
 };
 
 
-async function navigateTo(url) {
+const navigateTo = (url) => {
+    history.pushState(null, null, url); 
+    loadContent(url);
+};
+
+
+const loadContent = async (url) => {
     const route = routes[url] || routes["/"];
-    const response = await fetch(route);
-    const html = await response.text();
-    document.getElementById("app").innerHTML = html;
-
-
-    document.querySelectorAll("nav a").forEach(link => {
-        link.classList.toggle("active", link.getAttribute("href") === url);
-    });
-}
-
-
-window.onpopstate = () => {
-    navigateTo(window.location.pathname);
+    const response = await fetch(route); 
+    const content = await response.text();
+    document.getElementById("app").innerHTML = content; 
 };
 
 
-document.addEventListener("click", event => {
-    if (event.target.matches("[data-link]")) {
-        event.preventDefault();
-        const url = event.target.getAttribute("href");
-        window.history.pushState(null, null, url);
-        navigateTo(url);
+document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-link]");
+    if (link) {
+        e.preventDefault(); 
+        navigateTo(link.getAttribute("href")); 
     }
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    navigateTo(window.location.pathname);
+window.addEventListener("popstate", () => {
+    loadContent(window.location.pathname);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadContent(window.location.pathname);
+});
+
+
+
+
+
+

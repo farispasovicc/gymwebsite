@@ -388,3 +388,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     color: red;
 }
+
+
+header a.active p {
+    font-weight: bold;
+    color: #007bff; /* Adjust the color as needed */
+    border-bottom: 2px solid #007bff; /* Optional underline for emphasis */
+}
