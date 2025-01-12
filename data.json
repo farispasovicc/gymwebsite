@@ -13,8 +13,14 @@
       "title": "Blog Post",
       "author": "Ivan Ivanović",
       "content": "100/10!."
-    }
+    },
+
+
+    { "email": "frspasovic@gmail.com", "password": "htmlcssjs" },
+    { "email": "amila@gmail.com", "password": "webdevel" }
+
 
 
   ]
-  
+
+

@@ -16,26 +16,25 @@
 
 
     </head>
-    <body id="app" class="dark-theme">
+    <body  class="dark-theme" >
 
-
-  <header>
-    <a href="/onama" data-link style="text-decoration: none;">
-        <p>ABOUT US</p>
-    </a>
-    <a href="/slike" data-link style="text-decoration: none;">
-        <p>PHOTOS</p>
-    </a>
-    <a href="/" data-link>
-        <img class="headertext" style="width:55px" src="photos/progym.png">
-    </a>
-    <a href="/cijene" data-link style="text-decoration: none;">
-        <p class="price">PRICE</p>
-    </a>
-    <a href="/lokacija" data-link style="text-decoration: none;">
-        <p style="margin-right: 50px;" class="locationtxt">LOCATION</p>
-    </a>
-</header>
+      <header>
+        <a href="onama.html" data-link style="text-decoration: none;">
+            <p>ABOUT US</p>
+        </a>
+        <a href="slike.html" data-link style="text-decoration: none;">
+            <p>PHOTOS</p>
+        </a>
+        <a href="/" data-link>
+            <img class="headertext" style="width:55px" src="photos/progym.png">
+        </a>
+        <a href="cijene.html" data-link style="text-decoration: none;">
+            <p class="price">PRICE</p>
+        </a>
+        <a href="lokacija.html" data-link style="text-decoration: none;">
+            <p style="margin-right: 50px;" class="locationtxt">LOCATION</p>
+        </a>
+    </header>
 
 
 
@@ -289,9 +288,38 @@
 </footer>
 
 
- 
+
+<script>
+  window.addEventListener('load', function() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const username = localStorage.getItem('username') || 'User';
   
-<script src="router.js" defer></script>
+      if (isLoggedIn !== 'true') {
+          window.location.href = 'login.html';
+      } else {
+          const header = document.querySelector('header');
+          const welcomeMessage = document.createElement('div');
+          welcomeMessage.id = 'welcomeMessage';
+          welcomeMessage.style.textAlign = 'center';
+          welcomeMessage.style.marginTop = '100px';
+          welcomeMessage.style.fontSize = '18px';
+          welcomeMessage.style.color = 'green';
+          welcomeMessage.textContent = `Hello, ${username}! Welcome back!`;
+  
+
+          header.insertAdjacentElement('afterend', welcomeMessage);
+      }
+  });
+  </script>
+  
+  
+
+  
+<main id="app">
+
+</main>
+<script src="auth.js"></script>
+<script src="main.js"></script>
 <script src="gallery.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
