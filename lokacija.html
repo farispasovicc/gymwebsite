@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="register.html">
         <link rel="stylesheet" href="login.html">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="gallery.js">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
@@ -44,11 +45,27 @@
 
         </header>
 <br><br><br><br>
+<div class="topofpage">
+    <nav style="text-align: right; margin-top: 100px;">
+      <p>Don`t have an account??</p>
+      <a style="color: red;" href="/login.html">Login / </a>
+      <a style="color: red;" href="/register.html">Register</a>
+  </nav>
+  
+  </div>
 
     <center>
         <h1 class="h1loc">LOCATION OF GYM:</h1><hr style="background-color: white;">  
         <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.131825192455!2d18.407310876539817!3d43.873820238133305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758ced521e01323%3A0xad2e1ebe1ee60ff5!2sProgym!5e0!3m2!1sen!2sba!4v1730885996728!5m2!1sen!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </center>
+
+    <div class="news-container">
+        <center><button id="fetchNews" >Show News</button></center>
+        <div id="newsResult"></div>
+        <p id="error"></p>
+    </div>
+
+
 
         <br><br>
         <footer>
@@ -80,6 +97,8 @@
                 </div>
             </div>
         </footer>
-          
+        <script src="gallery.js"></script>
+        <script src="auth.js"></script>
+
     </body>
 </html>
